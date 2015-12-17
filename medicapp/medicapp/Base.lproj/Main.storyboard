@@ -18,64 +18,84 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPI-cW-RNM">
-                                <rect key="frame" x="510" y="142" width="46" height="30"/>
+                                <rect key="frame" x="247" y="285" width="106" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="IkJ-AF-M1H" kind="show" id="quj-Qv-6GU"/>
-                                </connections>
+                                <state key="normal" title="EMPEZAR"/>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86242053724734891" green="0.90822539371563971" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KPI-cW-RNM" firstAttribute="centerX" secondItem="udw-x7-DsU" secondAttribute="centerX" id="D0U-tK-BqM"/>
                             <constraint firstItem="KPI-cW-RNM" firstAttribute="centerY" secondItem="udw-x7-DsU" secondAttribute="centerY" id="zy2-k7-G12"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kwv-ly-fla"/>
+                    <navigationItem key="navigationItem" id="Kwv-ly-fla">
+                        <barButtonItem key="leftBarButtonItem" title="Salir" id="c8b-Lu-t8M"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="JGG-LH-YlY" kind="show" id="bWi-OL-JxT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es8-V7-KeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="-1030"/>
+            <point key="canvasLocation" x="1402" y="-1074"/>
         </scene>
-        <!--Listado de pastillas-->
-        <scene sceneID="lIY-Lb-HcN">
+        <!--Menú principal-->
+        <scene sceneID="4JF-JL-UDh">
             <objects>
-                <tableViewController id="IkJ-AF-M1H" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aLY-up-gZu">
+                <viewController id="JGG-LH-YlY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ovu-ic-Tsk"/>
+                        <viewControllerLayoutGuide type="bottom" id="JhC-Bk-GSL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="git-ct-iE8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mky-Zb-uh6">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mky-Zb-uh6" id="Bb8-Q3-Ha2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GT8-t2-xjf">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="IkJ-AF-M1H" id="T6b-mJ-vSC"/>
-                            <outlet property="delegate" destination="IkJ-AF-M1H" id="nPG-fo-Qar"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Listado de pastillas" id="88I-iw-iGB">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eWo-Vg-9mg"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="9Jc-ab-7Zb"/>
+                                <items>
+                                    <barButtonItem style="plain" id="uCn-pF-L8n">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="isu-aa-Xfe">
+                                            <rect key="frame" x="20" y="7" width="96" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <state key="normal" title="Nueva pastilla">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="jeX-1G-7lF">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cxv-4f-rDP">
+                                            <rect key="frame" x="126" y="7" width="57" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <state key="normal" title="Historial">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="0.32351541159240171" blue="0.38863240817542566" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.75494218833695426" blue="0.76385334879199474" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menú principal" id="qlu-nE-Kao">
+                        <barButtonItem key="leftBarButtonItem" title="Salir" id="HNn-dQ-CJL"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="gFu-Mq-Bjc" kind="show" id="vGo-ly-CRT"/>
+                        <segue destination="gFu-Mq-Bjc" kind="show" id="ntF-IN-jdu"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RCD-aY-JiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ve9-DB-WKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="-238"/>
+            <point key="canvasLocation" x="2125" y="-1080"/>
         </scene>
         <!--Nueva pastilla-->
         <scene sceneID="UXs-bx-fXe">
@@ -110,7 +130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faN-mC-KGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2808" y="-550"/>
+            <point key="canvasLocation" x="2838" y="-1074"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1AQ-SZ-naw">
@@ -129,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GR0-RC-g7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="-478"/>
+            <point key="canvasLocation" x="656" y="-1064"/>
         </scene>
     </scenes>
 </document>
