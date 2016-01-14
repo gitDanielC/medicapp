@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmP-K4-4Me">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmP-K4-4Me">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PASTILLAS-->
         <scene sceneID="uDr-IP-2Kg">
             <objects>
-                <viewController id="pw9-zm-eQB" sceneMemberID="viewController">
+                <viewController title="PASTILLAS" id="pw9-zm-eQB" customClass="ViewController" customModule="medicapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xtj-yC-fj8"/>
                         <viewControllerLayoutGuide type="bottom" id="Ll1-dG-KQD"/>
@@ -16,121 +16,89 @@
                     <view key="view" contentMode="scaleToFill" id="udw-x7-DsU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPI-cW-RNM">
-                                <rect key="frame" x="247" y="285" width="106" height="30"/>
-                                <animations/>
-                                <state key="normal" title="EMPEZAR"/>
-                            </button>
-                        </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.86242053724734891" green="0.90822539371563971" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="KPI-cW-RNM" firstAttribute="centerX" secondItem="udw-x7-DsU" secondAttribute="centerX" id="D0U-tK-BqM"/>
-                            <constraint firstItem="KPI-cW-RNM" firstAttribute="centerY" secondItem="udw-x7-DsU" secondAttribute="centerY" id="zy2-k7-G12"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kwv-ly-fla">
+                    <navigationItem key="navigationItem" title="MEDICAPP" id="Kwv-ly-fla">
                         <barButtonItem key="leftBarButtonItem" title="Salir" id="c8b-Lu-t8M"/>
+                        <barButtonItem key="rightBarButtonItem" title="Empezar" id="q9v-lD-5zT">
+                            <connections>
+                                <segue destination="H7x-2r-NrA" kind="show" id="Hwu-2J-ZmT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="JGG-LH-YlY" kind="show" id="bWi-OL-JxT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es8-V7-KeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1402" y="-1074"/>
         </scene>
-        <!--Menú principal-->
-        <scene sceneID="4JF-JL-UDh">
+        <!--PASTILLAS-->
+        <scene sceneID="YrW-cc-TXW">
             <objects>
-                <viewController id="JGG-LH-YlY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ovu-ic-Tsk"/>
-                        <viewControllerLayoutGuide type="bottom" id="JhC-Bk-GSL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="git-ct-iE8">
+                <tableViewController title="PASTILLAS" id="H7x-2r-NrA" customClass="TableViewController" customModule="medicapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" id="NVO-Z1-wSh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GT8-t2-xjf">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <animations/>
-                                <items>
-                                    <barButtonItem style="plain" id="uCn-pF-L8n">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="isu-aa-Xfe">
-                                            <rect key="frame" x="20" y="7" width="96" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <state key="normal" title="Nueva pastilla">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="jeX-1G-7lF">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cxv-4f-rDP">
-                                            <rect key="frame" x="126" y="7" width="57" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <state key="normal" title="Historial">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="1" green="0.32351541159240171" blue="0.38863240817542566" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="1" green="0.75494218833695426" blue="0.76385334879199474" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Menú principal" id="qlu-nE-Kao">
-                        <barButtonItem key="leftBarButtonItem" title="Salir" id="HNn-dQ-CJL"/>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="gFu-Mq-Bjc" kind="show" id="ntF-IN-jdu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ve9-DB-WKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2125" y="-1080"/>
-        </scene>
-        <!--Nueva pastilla-->
-        <scene sceneID="UXs-bx-fXe">
-            <objects>
-                <tableViewController id="gFu-Mq-Bjc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OBq-8d-VEV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Eul-kc-dDu">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" rowHeight="189" id="R3f-t4-vKi" customClass="MiCelda" customModule="medicapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="189"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eul-kc-dDu" id="j4G-ob-zhP">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R3f-t4-vKi" id="3dt-Zj-TQb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1l-T1-wGj">
+                                            <rect key="frame" x="53" y="33" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
-                                <animations/>
+                                <connections>
+                                    <outlet property="titulo" destination="S1l-T1-wGj" id="hRo-Ba-VzD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="gFu-Mq-Bjc" id="Odv-MD-pIb"/>
-                            <outlet property="delegate" destination="gFu-Mq-Bjc" id="5qq-H3-ien"/>
+                            <outlet property="dataSource" destination="H7x-2r-NrA" id="0Vv-X6-ja6"/>
+                            <outlet property="delegate" destination="H7x-2r-NrA" id="kCF-dU-my9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nueva pastilla" id="gkZ-yh-TT5">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="R9M-yQ-8TN"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wnd-LV-V0D"/>
+                    <navigationItem key="navigationItem" title="PASTILLAS" id="32f-N4-AJn">
+                        <barButtonItem key="leftBarButtonItem" title="Salir" id="lUs-E9-oD4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Cu-LS-AWV">
+                            <connections>
+                                <segue destination="Y3d-3o-ao9" kind="show" id="m4d-YU-C09"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="faN-mC-KGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hy8-vu-QWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="-1074"/>
+            <point key="canvasLocation" x="2113" y="-1064"/>
+        </scene>
+        <!--Nueva pastilla-->
+        <scene sceneID="a5W-Dd-43R">
+            <objects>
+                <viewController title="Nueva pastilla" id="Y3d-3o-ao9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nDh-0L-neS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dvo-HH-0fg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OSq-18-zrD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.68449895687381512" green="0.92244183933566926" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NUEVA PASTILLA" id="bA0-kF-o17">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YOa-EA-ADE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iNt-39-JdR"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09t-Iw-y2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2918" y="-1064"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1AQ-SZ-naw">
@@ -140,7 +108,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mS9-Dk-fIQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

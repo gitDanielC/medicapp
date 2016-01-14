@@ -13,6 +13,9 @@
 		1F652A951C233B2B00B60E04 /* medicapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F652A931C233B2B00B60E04 /* medicapp.xcdatamodeld */; };
 		1F652A971C233B2B00B60E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F652A961C233B2B00B60E04 /* Assets.xcassets */; };
 		1F652A9A1C233B2B00B60E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F652A981C233B2B00B60E04 /* LaunchScreen.storyboard */; };
+		1FE76B751C482DCE00A71290 /* Pastillas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE76B741C482DCE00A71290 /* Pastillas.swift */; };
+		1FE76B7F1C4838FB00A71290 /* MiCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE76B7E1C4838FB00A71290 /* MiCelda.swift */; };
+		1FE76B811C4839B000A71290 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE76B801C4839B000A71290 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1F652A961C233B2B00B60E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F652A991C233B2B00B60E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F652A9B1C233B2B00B60E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FE76B741C482DCE00A71290 /* Pastillas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pastillas.swift; sourceTree = "<group>"; };
+		1FE76B7E1C4838FB00A71290 /* MiCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCelda.swift; sourceTree = "<group>"; };
+		1FE76B801C4839B000A71290 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				1F652A981C233B2B00B60E04 /* LaunchScreen.storyboard */,
 				1F652A9B1C233B2B00B60E04 /* Info.plist */,
 				1F652A931C233B2B00B60E04 /* medicapp.xcdatamodeld */,
+				1FE76B741C482DCE00A71290 /* Pastillas.swift */,
+				1FE76B7E1C4838FB00A71290 /* MiCelda.swift */,
+				1FE76B801C4839B000A71290 /* TableViewController.swift */,
 			);
 			path = medicapp;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F652A8F1C233B2B00B60E04 /* ViewController.swift in Sources */,
+				1FE76B811C4839B000A71290 /* TableViewController.swift in Sources */,
 				1F652A951C233B2B00B60E04 /* medicapp.xcdatamodeld in Sources */,
+				1FE76B7F1C4838FB00A71290 /* MiCelda.swift in Sources */,
 				1F652A8D1C233B2B00B60E04 /* AppDelegate.swift in Sources */,
+				1FE76B751C482DCE00A71290 /* Pastillas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +300,7 @@
 				1F652AA01C233B2B00B60E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
